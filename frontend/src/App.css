@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+}
+
+.container {
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+input {
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.table th {
+  background-color: #1976d2;
+  color: white;
+  padding: 12px;
+  text-align: left;
+}
+
+.table td {
+  padding: 12px;
+  background-color: white;
+}
+
+.table tr {
+  border-bottom: 1px solid #eee;
+}
+
+.table tr:hover {
+  background-color: #f5f5f5;
+}
+.sidebar p {
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 8px;
+  transition: 0.2s;
+}
+
+.sidebar p:hover {
+  background: #334155;
+}
+.sidebar-btn {
+  background: transparent;
+  color: white;
+  border: none;
+  text-align: left;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 14px;
+}
+
+.sidebar-btn:hover {
+  background: #334155;
+}
+.sidebar-btn.active {
+  background: #2563eb;
+}
