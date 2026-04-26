@@ -1,5 +1,5 @@
 from app import create_app
-
+import os
 app = create_app()
 
 print(app.url_map)   # 👈 ADD THIS LINE
