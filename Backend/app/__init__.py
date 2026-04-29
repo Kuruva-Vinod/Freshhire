@@ -2,9 +2,13 @@ from flask import Flask
 from .models import db
 from .routes import main
 import os
+from flask_cors import CORS
 
 def create_app():
     app = Flask(__name__)
+
+    # ✅ APPLY CORS HERE (correct place)
+    CORS(app, resources={r"/*": {"origins": "*"}})
 
     basedir = os.path.abspath(os.path.dirname(__file__))
 
@@ -14,7 +18,6 @@ def create_app():
     db.init_app(app)
     app.register_blueprint(main)
 
-    # create DB tables
     with app.app_context():
         db.create_all()
 
