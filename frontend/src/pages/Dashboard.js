@@ -9,17 +9,17 @@ function Dashboard() {
   const [active, setActive] = useState("dashboard");
 
   useEffect(() => {
-    const isLoggedIn = localStorage.getItem("isLoggedIn");
+  const isLoggedIn = localStorage.getItem("isLoggedIn");
 
-    if (!isLoggedIn) {
-      navigate("/login");
-      return;
-    }
+  if (!isLoggedIn) {
+    navigate("/login");
+    return;
+  }
 
-    fetch("https://freshhire-4a8k.onrender.com/applications")
-      .then((res) => res.json())
-      .then((data) => setApplications(data));
-  }, []);
+  fetch("https://freshhire-4a8k.onrender.com/applications")
+    .then((res) => res.json())
+    .then((data) => setApplications(data));
+  }, [navigate]);  
 
   const handleProfileChange = (e) => {
     setProfile({ ...profile, [e.target.name]: e.target.value });
