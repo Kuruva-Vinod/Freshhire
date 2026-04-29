@@ -211,25 +211,25 @@ const handleAddApplication = () => {
           }}>
             <h3>Your Applications</h3>
 
-          <table style={{ width: "100%" }}>
+          <table className="app-table">
             <thead>
-              <tr>
-                <th>Name</th>
-                <th>Company</th>
-                <th>Role</th>
-                <th>Status</th>
-              </tr>
+            <tr>
+              <th>Name</th>
+              <th>Company</th>
+              <th>Role</th>
+              <th>Status</th>
+            </tr>
             </thead>
 
             <tbody>
-              {applications.map((app) => (
-                <tr key={app.id}>
-                  <td>{app.name}</td>
-                  <td>{app.company}</td>
-                  <td>{app.role}</td>
-                  <td>{app.status}</td>
-                </tr>
-              ))}
+            {applications.map((app, index) => (
+              <tr key={index}>
+                <td>{app.name}</td>
+                <td>{app.company}</td>
+                <td>{app.role}</td>
+                <td>{app.status}</td>
+              </tr>
+            ))}
             </tbody>
           </table>
         </div>
