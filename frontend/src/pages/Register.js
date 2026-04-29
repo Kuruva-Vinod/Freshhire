@@ -10,7 +10,7 @@ function Register() {
   };
 
   const handleRegister = () => {
-    fetch("http://localhost:5000/register", {
+    fetch("https://freshhire-4a8k.onrender.com/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

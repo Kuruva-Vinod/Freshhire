@@ -16,7 +16,7 @@ function Dashboard() {
       return;
     }
 
-    fetch("http://localhost:5000/applications")
+    fetch("https://freshhire-4a8k.onrender.com/applications")
       .then((res) => res.json())
       .then((data) => setApplications(data));
   }, []);
@@ -26,7 +26,7 @@ function Dashboard() {
   };
 
   const handleSuggest = () => {
-    fetch("http://localhost:5000/suggest-jobs", {
+    fetch("https://freshhire-4a8k.onrender.com/suggest-jobs", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -53,7 +53,7 @@ const handleFormChange = (e) => {
 };
 
 const handleAddApplication = () => {
-  fetch("http://localhost:5000/add-application", {
+  fetch("https://freshhire-4a8k.onrender.com/add-application", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -65,7 +65,7 @@ const handleAddApplication = () => {
       alert("Application added");
 
       // refresh data
-      fetch("http://localhost:5000/applications")
+      fetch("https://freshhire-4a8k.onrender.com/applications")
         .then((res) => res.json())
         .then((data) => setApplications(data));
     });
